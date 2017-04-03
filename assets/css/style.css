@@ -1,13 +1,15 @@
 .custom-wrapper {
-  background-color: #ffd390;
+  background-color: #1976d2;
   margin-bottom: 1em;
   -webkit-font-smoothing: antialiased;
-  height: 2.1em;
+  height: 2.5em;
   overflow: hidden;
   -webkit-transition: height 0.5s;
   -moz-transition: height 0.5s;
   -ms-transition: height 0.5s;
   transition: height 0.5s;
+  padding-top: .5em;
+  padding-bottom: .5em;
 }
 
 .custom-wrapper.open {
@@ -16,6 +18,14 @@
 
 .custom-wrapper .pure-menu-list {
   float: right;
+}
+
+.custom-wrapper .pure-menu-list .pure-menu-link {
+  color: #ffffff;
+}
+
+.custom-brand {
+  color: #1976d2;
 }
 
 .custom-menu-3 {
@@ -27,13 +37,13 @@
   height: 34px;
   display: block;
   position: absolute;
-  top: 0;
+  top: .75em;
   right: 0;
   display: none;
 }
 
 .custom-toggle .bar {
-  background-color: #777;
+  background-color: #ffffff;
   display: block;
   width: 20px;
   height: 2px;

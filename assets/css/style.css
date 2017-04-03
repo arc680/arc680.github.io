@@ -86,3 +86,7 @@
     display: block;
   }
 }
+
+#menu {
+  padding-top: 0.5em;
+}

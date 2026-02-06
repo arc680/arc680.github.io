@@ -5,47 +5,45 @@
     <meta charset="utf-8">
     <title>arc680</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/pure-min.css">
-    <!--[if lte IE 8]>
-          <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/grids-responsive-old-ie-min.css">
-      <![endif]-->
-    <!--[if gt IE 8]><!-->
-    <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/grids-responsive-min.css">
-    <!--<![endif]-->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body>
+<body class="bg-white text-gray-900">
 
-    <header class="custom-wrapper pure-g">
-        <div class="pure-u-1 pure-u-md-1-3">
-            <div class="pure-menu">
-                <span class="pure-menu-heading custom-brand">&nbsp;</span>
-                <a href="#" class="custom-toggle" id="toggle"><s class="bar"></s><s class="bar"></s></a>
+    <header class="menu-wrapper bg-gray-800 mb-4 overflow-hidden h-10 md:h-auto transition-all duration-500" id="header">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap items-center justify-between">
+                <div class="w-full md:w-1/3">
+                    <div class="py-2">
+                        <span class="text-gray-800">&nbsp;</span>
+                        <a href="#" class="menu-toggle w-8 h-8 block absolute top-3 right-4 md:hidden" id="toggle">
+                            <span class="menu-toggle-bar bg-white"></span>
+                            <span class="menu-toggle-bar bg-white"></span>
+                        </a>
+                    </div>
+                </div>
+                <nav class="w-full md:w-2/3 pt-2" id="menu">
+                    <ul class="flex flex-col md:flex-row md:justify-end space-y-2 md:space-y-0 md:space-x-6 list-none" id="menu-list">
+                        <li><a href="https://twitter.com/arc680" class="text-white hover:text-gray-300 transition-colors">Twitter</a></li>
+                        <li><a href="https://github.com/arc680" class="text-white hover:text-gray-300 transition-colors">Github</a></li>
+                        <li><a href="http://arc680.hatenablog.jp/" class="text-white hover:text-gray-300 transition-colors">Blog</a></li>
+                    </ul>
+                </nav>
             </div>
-        </div>
-        <div class="pure-u-1 pure-u-md-2-3" id="menu">
-            <div class="pure-menu pure-menu-horizontal custom-can-transform">
-                <ul class="pure-menu-list" id="menu-list">
-                    <li class="pure-menu-item"><a href="https://twitter.com/arc680" class="pure-menu-link">Twitter</a></li>
-                    <li class="pure-menu-item"><a href="https://github.com/arc680" class="pure-menu-link">Github</a></li>
-                    <li class="pure-menu-item"><a href="http://arc680.hatenablog.jp/" class="pure-menu-link">Blog</a></li>
-                </ul>
-            </div>
-        </div>
         </div>
     </header>
 
-    <article>
-      <h2>arc680</h2>
-      <ul>
-        <li>一応 Web 系エンジニア</li>
-          <ul>
+    <article class="container mx-auto px-4 py-4">
+      <h2 class="text-2xl font-bold mb-4 text-gray-900">arc680</h2>
+      <ul class="list-disc pl-5 space-y-2 text-gray-700">
+        <li>一応 Web 系エンジニア
+          <ul class="list-disc pl-5 mt-2 space-y-1">
             <li>仕事だと PHP や JavaScript がメイン</li>
             <li>遊びだと Ruby</li>
           </ul>
-          <li>ゲームやアニメを嗜む</li>
-          <li>端末はそんなに持ってない</li>
+        </li>
+        <li>ゲームやアニメを嗜む</li>
+        <li>端末はそんなに持ってない</li>
       </ul>
     </article>
 

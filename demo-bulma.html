@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>arc680 - Bulma デモ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+    <style>
+        .navbar {
+            background-color: #1976d2 !important;
+        }
+        .navbar-item, .navbar-link {
+            color: white !important;
+        }
+        .navbar-item:hover, .navbar-link:hover {
+            background-color: rgba(255, 255, 255, 0.1) !important;
+            color: white !important;
+        }
+        .navbar-burger {
+            color: white !important;
+        }
+        article {
+            padding: 1.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item">
+                &nbsp;
+            </a>
+
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navbarMenu" class="navbar-menu">
+            <div class="navbar-end">
+                <a href="https://twitter.com/arc680" class="navbar-item">Twitter</a>
+                <a href="https://github.com/arc680" class="navbar-item">Github</a>
+                <a href="http://arc680.hatenablog.jp/" class="navbar-item">Blog</a>
+            </div>
+        </div>
+    </nav>
+
+    <article class="content">
+        <h2>arc680</h2>
+        <ul>
+            <li>一応 Web 系エンジニア
+                <ul>
+                    <li>仕事だと PHP や JavaScript がメイン</li>
+                    <li>遊びだと Ruby</li>
+                </ul>
+            </li>
+            <li>ゲームやアニメを嗜む</li>
+            <li>端末はそんなに持ってない</li>
+        </ul>
+    </article>
+
+    <script>
+        // モバイルメニュー開閉
+        document.addEventListener('DOMContentLoaded', () => {
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+            $navbarBurgers.forEach(el => {
+                el.addEventListener('click', () => {
+                    const target = el.dataset.target;
+                    const $target = document.getElementById(target);
+                    el.classList.toggle('is-active');
+                    $target.classList.toggle('is-active');
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

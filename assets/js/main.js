@@ -2,37 +2,31 @@
     var menu = document.getElementsByTagName('header')[0],
         WINDOW_CHANGE_EVENT = ('onorientationchange' in window) ? 'orientationchange' : 'resize';
 
-    function toggleHorizontal() {
-        [].forEach.call(
-            document.getElementsByTagName('header')[0].querySelectorAll('.custom-can-transform'),
-            function(el) {
-                el.classList.toggle('pure-menu-horizontal');
-            }
-        );
-    };
-
     function toggleMenu() {
-        // set timeout so that the panel has a chance to roll up
-        // before the menu switches states
-        if (menu.classList.contains('open')) {
-            setTimeout(toggleHorizontal, 500);
+        var header = menu;
+        if (header.classList.contains('h-10')) {
+            header.classList.remove('h-10');
+            header.classList.add('h-auto');
         } else {
-            toggleHorizontal();
+            header.classList.add('h-10');
+            header.classList.remove('h-auto');
         }
-        menu.classList.toggle('open');
-        document.getElementById('toggle').classList.toggle('x');
+        document.getElementById('toggle').classList.toggle('active');
     };
 
     function closeMenu() {
-        if (menu.classList.contains('open')) {
+        if (!menu.classList.contains('h-10')) {
             toggleMenu();
         }
     }
 
-    document.getElementById('toggle').addEventListener('click', function(e) {
-        toggleMenu();
-        e.preventDefault();
-    });
+    var toggleEl = document.getElementById('toggle');
+    if (toggleEl) {
+        toggleEl.addEventListener('click', function(e) {
+            toggleMenu();
+            e.preventDefault();
+        });
+    }
 
     window.addEventListener(WINDOW_CHANGE_EVENT, closeMenu);
 })(this, this.document);

@@ -1,0 +1,11 @@
+{
+  "name": "arc680-github-io",
+  "version": "1.0.0",
+  "description": "Personal website for arc680",
+  "scripts": {
+    "build:css": "tailwindcss -i ./assets/css/input.css -o ./assets/css/style.css --minify"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.1"
+  }
+}
